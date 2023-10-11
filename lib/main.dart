@@ -1,7 +1,11 @@
-import 'package:coffeeappui/pages/home_page.dart';
+import 'package:coffeeappui/pages/home/home_page.dart';
+import 'package:coffeeappui/pages/login_logout/login_page.dart';
+import 'package:coffeeappui/pages/welcome_page.dart';
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get_navigation/src/root/get_material_app.dart';
+import 'package:get/get_navigation/src/routes/get_route.dart';
 
 // void main() => runApp(const MyApp());
 void main() => runApp(
@@ -17,14 +21,19 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      // ignore: deprecated_member_use
+    return GetMaterialApp(
       useInheritedMediaQuery: true,
       locale: DevicePreview.locale(context),
       builder: DevicePreview.appBuilder,
-      home: const HomePage(),
-      theme:
-          ThemeData(brightness: Brightness.dark, primarySwatch: Colors.orange),
+      home: const WelComePage(),
+      getPages: [
+        GetPage(name: '/welcomepage', page: () => const WelComePage()),
+        GetPage(name: '/homepage', page: () => const HomePage()),
+      ],
+      theme: ThemeData(
+        brightness: Brightness.dark,
+        primarySwatch: Colors.orange,
+      ),
       debugShowCheckedModeBanner: false,
     );
   }
