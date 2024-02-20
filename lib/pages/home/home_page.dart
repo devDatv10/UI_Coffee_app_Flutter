@@ -33,7 +33,7 @@ class _HomePageState extends State<HomePage> {
         description:
             'A cappuccino is a coffee drink made from a mixture of espresso and steamed milk. A traditional Italian cappuccino is generally a single (or sometimes a double) espresso shot topped with equal parts steamed and frothed milk (in a ratio of 1:1:1). Many Americans have adapted this recipe, using more steamed and frothed milk for a milder espresso flavor and a richer taste.',
         price: '4.10',
-        rating: '4.7'),
+        rating: '4.0'),
     Products(
         name: 'Espresso',
         imagePath: 'lib/assets/images/espresso/espresso.jpg',

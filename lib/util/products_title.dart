@@ -29,14 +29,14 @@ class ProductsTitle extends StatelessWidget {
             //text
             Padding(
               padding:
-                  const EdgeInsets.symmetric(vertical: 12.0, horizontal: 8.0),
+                  const EdgeInsets.symmetric(vertical: 5.0, horizontal: 8.0),
               child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
                       product.name,
                       style: const TextStyle(
-                          fontSize: 16.0, fontWeight: FontWeight.bold),
+                          fontSize: 14.0, fontWeight: FontWeight.bold),
                     ),
                     const SizedBox(
                       height: 5.0,
@@ -45,7 +45,7 @@ class ProductsTitle extends StatelessWidget {
                       product.description,
                       overflow: TextOverflow.ellipsis,
                       maxLines: 2,
-                      style: TextStyle(color: Colors.grey[500]),
+                      style: TextStyle(color: Colors.grey[500], fontSize: 12.0),
                     ),
                   ]),
             ),
